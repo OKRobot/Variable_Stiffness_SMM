@@ -14,10 +14,10 @@ dy0=0;
 
 % cretae Poincare map
 
-nk = 21;
+nk = 51;
 
 k_min = 5000;
-k_max = 25000;
+k_max = 55000;
 kVec = linspace(k_min, k_max, nk);
 
 % y0Vec = linspace( l0*sin(a0), 1.4, ny0);
