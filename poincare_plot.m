@@ -2,7 +2,7 @@
 
 
 clf;
-equals_line = linspace(0.96,1.4,51);
+equals_line = linspace(0.9,1.4,51);
 hold on;
 plot_range = find(~isnan(y1Vec3) == 1);
 plot_range_fixed = find(~isnan(y1Vec_fixed) == 1);
