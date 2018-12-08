@@ -24,7 +24,7 @@ y0_min = l0*sin(a0) + eps;
 y0_max = 1.3;
 y0Vec3 = linspace( y0_min, y0_max, ny0);
 
-y1Vec = NaN*y0Vec3;
+y1Vec3 = NaN*y0Vec3;
 
 ground = 0.00001;
 
@@ -60,6 +60,24 @@ for yIdx = 1:ny0
         if dx>=0 
             if y1 > 0.5
                 y1Vec_fixed(yIdx)=y1; 
+            end
+        end
+        
+    end
+    
+end
+
+y1Vec_direct = NaN*y0Vec3;
+for yIdx = 1:ny0
+    y0 = y0Vec3(yIdx);
+    dx0 = sqrt(2/m*(Esys-m*g*y0));
+    k = kVec(idx_rows(yIdx));
+    
+    sim('problem_1.slx')
+    if ~isempty(y1)
+        if dx>=0 
+            if y1 > 0.5
+                y1Vec_direct(yIdx)=y1; 
             end
         end
         

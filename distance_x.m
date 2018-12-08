@@ -17,12 +17,12 @@ x0=0;
 dy0=0;
 
 
-model = "problem_3_fixed";
-% model = "problem_3_adaptive";
+% model = "problem_3_fixed";
+model = "problem_3_adaptive";
 
 % create Poincare map
 nH0 = 41;
-ground_max = 0.10;
+ground_max = 0.15;
 ground_height_vec = linspace(0.00001,ground_max,nH0);
 
 if model == "problem_3_fixed"

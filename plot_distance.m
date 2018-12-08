@@ -17,4 +17,4 @@ plot(ground_height_vec(plot_range), distance_vec_timed(plot_range_timed), 'Marke
 title("Distance travelled versus ground height noise",'fontsize',18);
 xlabel("Ground height varies from [-x, x/5]",'fontsize',15);
 ylabel("Distance reached",'fontsize',15)
-legend('Fixed attack = 68', 'Stiffness varies with time');
+legend('Fixed stiffness = 20000', 'Stiffness varies with time');

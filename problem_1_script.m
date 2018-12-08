@@ -12,18 +12,14 @@ a0 = 68 * pi/180;
 x0=0;
 dy0=0;
 
-% cretae Poincare map
+% create Poincare map
 
 nk = 51;
 
 k_min = 5000;
 k_max = 55000;
 kVec = linspace(k_min, k_max, nk);
-
-% y0Vec = linspace( l0*sin(a0), 1.4, ny0);
 y1Vec = NaN*kVec;
-
-% dx0 = sqrt(2/m*(Esys-m*g*y0));
 
 ground = 0.00001;
 
@@ -31,7 +27,6 @@ ground = 0.00001;
 for kIdx = 1:nk
     
     k = kVec(kIdx);
-%     dx0 = sqrt(2/m*(Esys-m*g*y0)); % unchanged in this model
     
     sim('problem_1.slx')
     
@@ -44,4 +39,4 @@ for kIdx = 1:nk
         
     end
     
-end %endfor
+end 
